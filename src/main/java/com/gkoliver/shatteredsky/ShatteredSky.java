@@ -8,6 +8,7 @@ import org.apache.logging.log4j.Logger;
 import com.gkoliver.shatteredsky.core.SSRef;
 import com.gkoliver.shatteredsky.core.handlers.RegistryEventHandler;
 import com.gkoliver.shatteredsky.core.registry.BiomeRegistry;
+import com.gkoliver.shatteredsky.core.registry.BlockRegistry;
 import com.gkoliver.shatteredsky.core.registry.DimensionRegistry;
 import com.gkoliver.shatteredsky.core.registry.EntityTypeRegistry;
 import com.gkoliver.shatteredsky.core.registry.ItemRegistry;
@@ -39,7 +40,7 @@ public class ShatteredSky {
 		BiomeRegistry.REGISTER_BIOME.register(eventBus);
 		DimensionRegistry.REGISTER_DIM.register(eventBus);
 		EntityTypeRegistry.REGISTER_ETYPE.register(eventBus);
-		
+		BlockRegistry.REGISTER_BLOCK.register(eventBus);
 	}
 	@SubscribeEvent
 	public static void onRegisterBiomes(final RegistryEvent.Register<Biome> event) {

@@ -23,6 +23,7 @@ public class ArrowPillarEntity extends MonsterEntity {
 	private int cooldown = 20;
 	public ArrowPillarEntity(EntityType<? extends MonsterEntity> type, World worldIn) {
 		super(type, worldIn);
+		
 	}
 	public AgeableEntity createChild() {
 		ArrowPillarEntity i = new ArrowPillarEntity(EntityTypeRegistry.ARROW_PILLAR.get(),world);

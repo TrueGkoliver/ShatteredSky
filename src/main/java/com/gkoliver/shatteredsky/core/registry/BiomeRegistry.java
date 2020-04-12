@@ -1,6 +1,7 @@
 package com.gkoliver.shatteredsky.core.registry;
 
 import com.gkoliver.shatteredsky.common.world.biome.BiomeCorruptedDeepForest;
+import com.gkoliver.shatteredsky.common.world.biome.BiomeCorruptedIsles;
 import com.gkoliver.shatteredsky.core.SSRef;
 
 import net.minecraft.block.Blocks;
@@ -26,7 +27,7 @@ public class BiomeRegistry {
 			.waterColor(0x00418A)
 			.waterFogColor(0x00418A)
 			.precipitation(RainType.RAIN)
-			.scale(2F)
+			.scale(1F) //TURN THIS BACK TO 2
 			.temperature(0F)
 			.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState()))
 			.category(Category.FOREST)
@@ -41,7 +42,7 @@ public class BiomeRegistry {
 			.scale(1F)
 			.temperature(0.2F)
 			.surfaceBuilder(SurfaceBuilder.DEFAULT, new SurfaceBuilderConfig(Blocks.GRASS_BLOCK.getDefaultState(), Blocks.DIRT.getDefaultState(), Blocks.DIRT.getDefaultState()))
-			.category(Category.BEACH)
+			.category(Category.PLAINS)
 			.downfall(0.5F)
 			.depth(0.11F)
 			.parent(null);
@@ -57,11 +58,11 @@ public class BiomeRegistry {
 	public static final RegistryObject<Biome> CORRUPTED_DEEP_FOREST = REGISTER_BIOME.register("corrupted_deep_forest",
 			() -> new BiomeCorruptedDeepForest(CDF_BUILDER));
 	public static final RegistryObject<Biome> CORRUPTED_ISLES = REGISTER_BIOME.register("corrupted_isles",
-			() -> new BiomeCorruptedDeepForest(CI_BUILDER));
+			() -> new BiomeCorruptedIsles(CI_BUILDER));
 	
 	public static void registerBiomes() {
-		registerBiome(CORRUPTED_DEEP_FOREST.get(), Type.OVERWORLD);
-		registerBiome(CORRUPTED_ISLES.get(), Type.OVERWORLD);
+		registerBiome(CORRUPTED_DEEP_FOREST.get(), Type.FOREST, Type.DENSE);
+		registerBiome(CORRUPTED_ISLES.get(), Type.FOREST, Type.HILLS);
 	}
 	
 	private static void registerBiome(Biome biome, Type... types) {

@@ -18,11 +18,10 @@ public class SSBiomeProvider extends BiomeProvider {
 
 	}
 	
-	private static final Set<Biome> SS_BIOMES = ImmutableSet.of(BiomeRegistry.CORRUPTED_DEEP_FOREST.get(), BiomeRegistry.CORRUPTED_ISLES.get());
+	private static final Set<Biome> SS_BIOMES = ImmutableSet.of(BiomeRegistry.CORRUPTED_ISLES.get(), BiomeRegistry.CORRUPTED_DEEP_FOREST.get());
 	@Override
 	public Biome getNoiseBiome(int x, int y, int z) {
-		
-		return BiomeRegistry.CORRUPTED_DEEP_FOREST.get();
+		return BiomeRegistry.CORRUPTED_ISLES.get();
 	}
 	
 
