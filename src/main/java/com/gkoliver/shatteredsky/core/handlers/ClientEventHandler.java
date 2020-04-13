@@ -2,10 +2,13 @@ package com.gkoliver.shatteredsky.core.handlers;
 
 import com.gkoliver.shatteredsky.common.entity.base.ArrowPillarEntity;
 import com.gkoliver.shatteredsky.common.entity.render.ArrowPillarRender;
+import com.gkoliver.shatteredsky.common.entity.render.model.ArrowPillarModel;
 import com.gkoliver.shatteredsky.core.SSRef;
 import com.gkoliver.shatteredsky.core.registry.EntityTypeRegistry;
-
+import net.minecraftforge.event.entity.player.UseHoeEvent;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.InputUpdateEvent;
+import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.Mod;
@@ -19,4 +22,5 @@ public class ClientEventHandler {
 	public static void clientSetup(FMLClientSetupEvent event) {
 		RenderingRegistry.registerEntityRenderingHandler(EntityTypeRegistry.ARROW_PILLAR.get(), ArrowPillarRender::new);
 	}
+	
 }

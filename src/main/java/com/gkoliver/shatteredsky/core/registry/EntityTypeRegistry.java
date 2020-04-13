@@ -14,6 +14,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class EntityTypeRegistry {
 	public static final DeferredRegister<EntityType<?>> REGISTER_ETYPE = new DeferredRegister<EntityType<?>>(ForgeRegistries.ENTITIES, SSRef.MOD_ID);
 	
-	public static final RegistryObject<EntityType<ArrowPillarEntity>> ARROW_PILLAR = REGISTER_ETYPE.register("arrow_pillar", ()->EntityType.Builder.<ArrowPillarEntity>create(ArrowPillarEntity::new, EntityClassification.MISC).size(1.6F, 2.2F).build(new ResourceLocation(SSRef.MOD_ID, "arrow_pillar").toString()));
+	public static final RegistryObject<EntityType<ArrowPillarEntity>> ARROW_PILLAR = REGISTER_ETYPE.register("arrow_pillar", ()->EntityType.Builder.<ArrowPillarEntity>create(ArrowPillarEntity::new, EntityClassification.MISC).size(1.6F, 2.4F).build(new ResourceLocation(SSRef.MOD_ID, "arrow_pillar").toString()));
 
 }
